@@ -2,7 +2,7 @@
 
 Spike for Nancy
 
-
+https://github.com/alex75it/spike.nancy/workflows/<WORKFLOW_NAME>/badge.svg
 
 
 ## GitHub Docker image creation
