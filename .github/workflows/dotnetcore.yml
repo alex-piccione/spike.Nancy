@@ -25,8 +25,8 @@ jobs:
     - name: Docker Login
       run: docker login docker.pkg.github.com --username alex-piccione -p ${{secrets.GITHUB_TOKEN}}
     - name: Docker Build
-      run: docker build -t docker.pkg.github.com/alex75it/spike.nancy/weather-api:${env.VERSION} "./Weather API"
+      run: docker build -t docker.pkg.github.com/alex75it/spike.nancy/weather-api:${{env.VERSION}} "./Weather API"
     #- name: Docker Tag image
     #  run: docker tag weather-api docker.pkg.github.com/alex75it/spike.nancy/weather-api:0.1
     - name: Docker Publish
-      run: docker push docker.pkg.github.com/alex75it/spike.nancy/weather-api:${env.VERSION}
+      run: docker push docker.pkg.github.com/alex75it/spike.nancy/weather-api:${{env.VERSION}}
