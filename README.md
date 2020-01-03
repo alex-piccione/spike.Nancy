@@ -2,7 +2,7 @@
 
 Spike for Nancy
 
-![""]("https://github.com/alex75it/spike.nancy/workflows/Build Docker image/badge.svg")
+![""]("https://github.com/alex75it/spike.nancy/workflows/Build%20Docker%20image/badge.svg")%20
 
 
 ## GitHub Docker image creation
