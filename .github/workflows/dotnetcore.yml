@@ -16,4 +16,4 @@ jobs:
     - name: Build with dotnet
       run: dotnet build --configuration Release
     - name: Docker Login
-      run: docker login docker.pkg.github.com --username alex-piccione
+      run: docker login docker.pkg.github.com --username alex-piccione -p $GITHUB_TOKEN
