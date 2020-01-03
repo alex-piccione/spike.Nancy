@@ -21,8 +21,8 @@ jobs:
       run: dotnet build --configuration Release
     - name: Docker Login
       run: docker login docker.pkg.github.com --username alex-piccione -p ${{secrets.GITHUB_TOKEN}}
-    - name: Docker build
-      run: docker build -t docker.pkg.github.com/alex75it/spike.nancy/weather-api:0.1
+    - name: Docker Build
+      run: docker build docker.pkg.github.com/alex75it/spike.nancy/weather-api:0.1
     #- name: Docker Tag image
     #  run: docker tag weather-api docker.pkg.github.com/alex75it/spike.nancy/weather-api:0.1
     - name: Docker Publish
