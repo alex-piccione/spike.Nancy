@@ -8,6 +8,7 @@ on: [push]
 env:
   IMAGE_ID: "docker.pkg.github.com/alex75it/spike.nancy/weather-api"
   VERSION: "0.2"
+  GITHUB_CONTEXT: ${{ toJson(github) }}
 
 jobs:
   build:
@@ -17,9 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+      run: echo "$GITHUB_CONTEXT"
     
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
