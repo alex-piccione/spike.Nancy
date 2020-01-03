@@ -2,12 +2,14 @@ name: Build Docker image
 
 on: [push]
 
+# ref to check: https://www.freecodecamp.org/news/publishing-github-event-data-with-github-actions-and-pages/
+
 # variables
 # IMAGE_ID
 # VERSION
 env:
   IMAGE_ID: "docker.pkg.github.com/alex75it/spike.nancy/weather-api"
-  VERSION: "0.3.1"
+  VERSION: "0.3.2"
   #GITHUB_CONTEXT: ${{ toJson(github) }}  
 
 jobs:
