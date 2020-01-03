@@ -7,7 +7,7 @@ on: [push]
 # VERSION
 env:
   IMAGE_ID: "docker.pkg.github.com/alex75it/spike.nancy/weather-api"
-  VERSION: "0.3"
+  VERSION: "0.3.$GITHUB_ACTION"
   #GITHUB_CONTEXT: ${{ toJson(github) }}  
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Docker Login
-      run: docker login docker.pkg.github.com --username alex-piccione -p $GITHUB_TOKEN
+      run: docker login docker.pkg.github.com --username alex-piccione -p ${{secret.GITHUB_TOKEN}}
     - name: Docker Build
       run: docker build -t $IMAGE_ID:$VERSION -t $IMAGE_ID:latest "./Weather API" 
     #- name: Docker Tag image
