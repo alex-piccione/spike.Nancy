@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["Weather API/Weather API.fsproj", "Weather API/"]
-RUN dotnet restore "Weather API/Weather API.fsproj"
+#COPY ["Weather API/Weather API.fsproj", "Weather API/"]
+#RUN dotnet restore "Weather API/Weather API.fsproj"
 COPY . .
-WORKDIR "/src/Weather API"
+#WORKDIR "/src/Weather API"
 RUN dotnet build "Weather API.fsproj" -c Release -o /app/build
 
 FROM build AS publish
